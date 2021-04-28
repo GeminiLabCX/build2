@@ -1,9 +1,15 @@
 package main
 
 import (
+	_ "embed"
 	"fmt"
 	"os"
 	"time"
+)
+
+var (
+	//go:embed VERSION
+	version string
 )
 
 var (
@@ -19,4 +25,5 @@ func main() {
 	fmt.Printf("🎆: %s\n", githash)
 	fmt.Printf("💈: %s\n", buildstamp)
 	fmt.Printf("💎: %s\n", goversion)
+	fmt.Printf("🍖: %s\n", version)
 }
